@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="loader" class="loader" style="display: none">
+      <div class="spinner"></div>
+    </div>
+    <div class="content">
+      <div class="sidebar">
+        <section class="filters">
+          <input id="search" type="text" placeholder="Search..." />
+          <select id="category">
+            <option value="all">All</option>
+          </select>
+          <label>
+            Price: <span id="price-value">700</span>
+            <input
+              type="range"
+              id="price-range"
+              min="0"
+              max="700"
+              value="700"
+              step="10"
+            />
+          </label>
+        </section>
+      </div>
+      <div class="prod-content">
+        <div class="summary-bar">
+          <button id="toggle-cart">
+            <i class="fas fa-store"></i> Cart (<span id="cart-count">0</span>)
+          </button>
+          <button id="toggle-wishlist">
+            <i class="far fa-heart"></i> Wishlist (<span id="wishlist-count"
+              >0</span
+            >)
+          </button>
+        </div>
+
+        <section id="product-list" class="products"></section>
+        <div id="pagination" class="pagination"></div>
+      </div>
+    </div>
+
+    <!-- CART MODAL -->
+    <div class="modal" id="cart-modal">
+      <div class="modal-content">
+        <button class="close">✖</button>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="cart-total">0</span></p>
+      </div>
+    </div>
+
+    <!-- WISHLIST MODAL -->
+    <div class="modal" id="wishlist-modal">
+      <div class="modal-content">
+        <button class="close">✖</button>
+        <h2>Your Wishlist</h2>
+        <ul id="wishlist-items"></ul>
+      </div>
+    </div>
+
+
+  </body>
+</html>
